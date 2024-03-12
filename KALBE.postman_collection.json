@@ -1,0 +1,770 @@
+{
+	"info": {
+		"_postman_id": "589bc6bf-810c-4ed8-ac25-856fe4297fe2",
+		"name": "KALBE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30519610"
+	},
+	"item": [
+		{
+			"name": "ATTENDANCE",
+			"item": [
+				{
+					"name": "INDEX",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{attendance-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{attendance-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REPORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/report",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{attendance-api}}/8d9504f6-b4eb-44d6-9001-841d8eff3676",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{attendance-api}}",
+								"8d9504f6-b4eb-44d6-9001-841d8eff3676"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_id\": \"2f2b44cc-15c0-4996-88cc-361b78cebe5f\",\n  \"location_id\": \"1a842c66-2ef6-48a9-9b33-79a6f2d8f29d\",\n  \"absent_in\": \"2024-03-12T08:00:00Z\",\n  \"absent_out\": \"2024-03-12T17:00:00Z\",\n  \"created_by\": \"ido\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{attendance-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{attendance-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_id\": \"123\",\n  \"location_id\": \"456\",\n  \"absent_in\": \"2024-03-12T08:00:00Z\",\n  \"absent_out\": \"2024-03-12T17:00:00Z\",\n  \"updated_at\": \"2024-03-12T12:45:00Z\",\n  \"updated_by\": \"ido\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{attendance-api}}/8d9504f6-b4eb-44d6-9001-841d8eff3676",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{attendance-api}}",
+								"8d9504f6-b4eb-44d6-9001-841d8eff3676"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{attendance-api}}/delete/8d9504f6-b4eb-44d6-9001-841d8eff3676",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{attendance-api}}",
+								"delete",
+								"8d9504f6-b4eb-44d6-9001-841d8eff3676"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EMPLOYEE",
+			"item": [
+				{
+					"name": "INDEX",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{employee-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{employee-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{employee-api}}/e2028235-49d8-49d8-989e-58b3e872f8f7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{employee-api}}",
+								"e2028235-49d8-49d8-989e-58b3e872f8f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_code\": \"EMP002\",\n  \"employee_name\": \"John Doe\",\n  \"password\": \"secretpassword\",\n  \"department_id\": \"fbc7fabd-ac95-455a-b464-9d1535f04b1b\",\n  \"position_id\": \"fbc7fabd-ac95-455a-b464-9d1535f04b1b\",\n  \"superior\": 456,\n  \"created_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{employee-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{employee-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"employee_code\": \"EMP001\",\n  \"employee_name\": \"john dho\",\n  \"password\": \"secretpassword\",\n  \"department_id\": \"fbc7fabd-ac95-455a-b464-9d1535f04b1b\",\n  \"position_id\": \"55fe17aa-deb6-494f-8262-14811008e907\",\n  \"superior\": 456\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{employee-api}}/2f2b44cc-15c0-4996-88cc-361b78cebe5f",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{employee-api}}",
+								"2f2b44cc-15c0-4996-88cc-361b78cebe5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{employee-api}}/delete/e2028235-49d8-49d8-989e-58b3e872f8f7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{employee-api}}",
+								"delete",
+								"e2028235-49d8-49d8-989e-58b3e872f8f7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MASTER DEPARTMENT",
+			"item": [
+				{
+					"name": "INDEX",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{department-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{department-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{department-api}}/b2dd4103-0604-48a7-a90f-fbd9502e3832",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{department-api}}",
+								"b2dd4103-0604-48a7-a90f-fbd9502e3832"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_name\": \"Human Resources\",\n  \"created_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{department-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{department-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_name\": \"Backend Dev\",\n  \"updated_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{department-api}}/b2dd4103-0604-48a7-a90f-fbd9502e3832",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{department-api}}",
+								"b2dd4103-0604-48a7-a90f-fbd9502e3832"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{department-api}}/delete/b2dd4103-0604-48a7-a90f-fbd9502e3832",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{department-api}}",
+								"delete",
+								"b2dd4103-0604-48a7-a90f-fbd9502e3832"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MASTER LOCATION",
+			"item": [
+				{
+					"name": "INDEX",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{location-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{location-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{location-api}}/7b359fd1-21e2-472b-ad3d-7bc85c0eb618",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{location-api}}",
+								"7b359fd1-21e2-472b-ad3d-7bc85c0eb618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"location_name\": \"Office A\",\n  \"created_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{location-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{location-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"location_name\": \"Office B\",\n  \"updated_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{location-api}}/7b359fd1-21e2-472b-ad3d-7bc85c0eb618",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{location-api}}",
+								"7b359fd1-21e2-472b-ad3d-7bc85c0eb618"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{location-api}}/delete/7b359fd1-21e2-472b-ad3d-7bc85c0eb618",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{location-api}}",
+								"delete",
+								"7b359fd1-21e2-472b-ad3d-7bc85c0eb618"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MASTER POSITION",
+			"item": [
+				{
+					"name": "INDEX",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{position-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{position-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{position-api}}/55fe17aa-deb6-494f-8262-14811008e907",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{position-api}}",
+								"55fe17aa-deb6-494f-8262-14811008e907"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_id\": \"123\",\n  \"position_name\": \"Manager\",\n  \"created_by\": \"AdminUser\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{position-api}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{position-api}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"department_id\": \"120\",\n  \"position_name\": \"Staff\",\n  \"updated_by\": \"AdminUser\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{position-api}}/55fe17aa-deb6-494f-8262-14811008e907",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{position-api}}",
+								"55fe17aa-deb6-494f-8262-14811008e907"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{position-api}}/delete/55fe17aa-deb6-494f-8262-14811008e907",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{position-api}}",
+								"delete",
+								"55fe17aa-deb6-494f-8262-14811008e907"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "REGIST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"password\": \"Password123@\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{auth-api}}/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{auth-api}}",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"johndoe\",\n  \"password\": \"Password123@\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/{{auth-api}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{auth-api}}",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA4NjU5MjEsInN1YiI6IjEwNmViOGY4LTNhNzktNGFiYy05NTU1LTM5MjdmN2ZiYWZjOCJ9.QzTlsVH4OzUSU1R7PiNa0MKTa0DBzTCaqMtcoJcuWng",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "127.0.0.1:3000"
+		},
+		{
+			"key": "prefix-api",
+			"value": "position"
+		},
+		{
+			"key": "attendance-api",
+			"value": "attendance"
+		},
+		{
+			"key": "employee-api",
+			"value": "employee",
+			"type": "string"
+		},
+		{
+			"key": "department-api",
+			"value": "masterdepartment",
+			"type": "string"
+		},
+		{
+			"key": "location-api",
+			"value": "masterlocation",
+			"type": "string"
+		},
+		{
+			"key": "position-api",
+			"value": "masterposition",
+			"type": "string"
+		},
+		{
+			"key": "auth-api",
+			"value": "auth",
+			"type": "string"
+		}
+	]
+}
